@@ -7,7 +7,7 @@ async function getData() {
   const res = await fetch("http://localhost:3000/api/posts", {
     cache: "no-store",
   });
-
+  // console.log("Error Here:", res.status, res.statusText);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
